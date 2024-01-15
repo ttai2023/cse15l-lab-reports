@@ -16,7 +16,7 @@
 
 **Explanation:**
 
-The ```cd``` command is used change the current working directory to a new directory within that directory. Since there were no arguments, the working directory returned to the home directory.
+The ```cd``` command is used to change the current working directory to a new directory within that directory. Since there were no arguments, the working directory returned to the home directory.
 
 **Error?**
 
