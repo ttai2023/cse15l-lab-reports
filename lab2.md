@@ -52,14 +52,14 @@ class ChatServer {
 ```
 
 ## Using /add-message?s=Hello&user=jpolitz
-[](/Screenshots/first_command.png)
+![](/Screenshots/first_command.png)
 - Me/thods Called: handleRequest(URI url), toString(ArrayList<String> strs)
 - Relevant Arguments: URI url - the url that is entered and to be processed
 - Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
 - Changed Values in Fields: jpolitz: Hello was added to ArrayList<String> strings
 
 ## Using /add-message?s=How are you&user=yash
-[](/Screenshots/second_command.png)
+![](/Screenshots/second_command.png)
 - Methods Called: handleRequest(URI url), toString(ArrayList<String> strs)
 - Relevant Arguments: URI url - the url that is entered and to be processed
 - Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
@@ -68,11 +68,11 @@ class ChatServer {
 # Part 2
 
 ## The absolute path to the private key for your SSH key for logging into ieng6 (on your computer, an EdStem workspace, or on the home directory of the lab computer)
-[](/Screenshots/private_key.png)
+![](/Screenshots/private_key.png)
 ## The absolute path to the public key for your SSH key for logging into ieng6 (this is the one you copied to your account on ieng6, so it should be a path on ieng6's file system)
-[](/Screenshots/public_key.png)
+![](/Screenshots/public_key.png)
 ## A terminal interaction where you log into your ieng6 account without being asked for a password.
-[](/Screenshots/login_wo_pw.png)
+![](/Screenshots/login_wo_pw.png)
 
 # Part 3
 
