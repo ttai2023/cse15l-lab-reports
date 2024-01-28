@@ -53,17 +53,17 @@ class ChatServer {
 
 ## Using /add-message?s=Hello&user=jpolitz
 ![](/Screenshots/first_command.png)
-- Methods Called: handleRequest(URI url), toString(ArrayList<String> strs)
-- Relevant Arguments: URI url - the url that is entered and to be processed
-- Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
-- Changed Values in Fields: ```"jpolitz: Hello"``` was added to ArrayList<String> strings
+- Methods Called: ```handleRequest(URI url)```, ```toString(ArrayList<String> strs)```
+- Relevant Arguments: ```URI url``` - the url that is entered and to be processed
+- Relevant Fields: ```ArrayList<String> strings``` - String ArrayList that stores all inputs into the url
+- Changed Values in Fields: ```"jpolitz: Hello"``` was added to ```ArrayList<String> strings```
 
 ## Using /add-message?s=How are you&user=yash
 ![](/Screenshots/second_command.png)
-- Methods Called: handleRequest(URI url), toString(ArrayList<String> strs)
-- Relevant Arguments: URI url - the url that is entered and to be processed
-- Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
-- Changed Values in Fields: ```"yash: How are you"``` was added to ArrayList<String> strings
+- Methods Called: ```handleRequest(URI url)```, ```toString(ArrayList<String> strs)```
+- Relevant Arguments: ```URI url``` - the url that is entered and to be processed
+- Relevant Fields: ```ArrayList<String> strings``` - String ArrayList that stores all inputs into the url
+- Changed Values in Fields: ```"yash: How are you"``` was added to ```ArrayList<String> strings```
 
 # Part 2
 
