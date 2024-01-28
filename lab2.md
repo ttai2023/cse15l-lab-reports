@@ -53,17 +53,17 @@ class ChatServer {
 
 ## Using /add-message?s=Hello&user=jpolitz
 ![](/Screenshots/first_command.png)
-- Me/thods Called: handleRequest(URI url), toString(ArrayList<String> strs)
+- Methods Called: handleRequest(URI url), toString(ArrayList<String> strs)
 - Relevant Arguments: URI url - the url that is entered and to be processed
 - Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
-- Changed Values in Fields: jpolitz: Hello was added to ArrayList<String> strings
+- Changed Values in Fields: ```"jpolitz: Hello"``` was added to ArrayList<String> strings
 
 ## Using /add-message?s=How are you&user=yash
 ![](/Screenshots/second_command.png)
 - Methods Called: handleRequest(URI url), toString(ArrayList<String> strs)
 - Relevant Arguments: URI url - the url that is entered and to be processed
 - Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
-- Changed Values in Fields: yash: How are you was added to ArrayList<String> strings
+- Changed Values in Fields: ```"yash: How are you"``` was added to ArrayList<String> strings
 
 # Part 2
 
@@ -76,7 +76,7 @@ class ChatServer {
 
 # Part 3
 
-I learnt that I can create a simple web server just by processing urls through code. 
+I learnt that I can create, start, and run a simple web server just by processing urls through code. By learning the different components of a url, we can process the url as a string and decompose it, returning the intended outcome to the user. Additionally, I also learnt that we need a free port number that no one else is using to run the server. 
 
 
 
