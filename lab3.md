@@ -1,5 +1,5 @@
 # Part 1 - Bugs
-- A failure-inducing input for the buggy program as a JUnit test
+## A failure-inducing input for the buggy program as a JUnit test
 ```
 	@Test 
 	public void testReverseInPlace() {
@@ -8,7 +8,7 @@
     assertArrayEquals(new int[]{3, 2, 1}, input2);
 	}
 ```
-- An input that doesn't induce a failure as a JUnit test 
+## An input that doesn't induce a failure as a JUnit test 
 ```
 @Test 
 	public void testReverseInPlace() {
@@ -16,10 +16,11 @@
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
 ```
-- The symptom, as the output of running the tests (provide it as a screenshot of running JUnit with at least the two inputs above)
+## The symptom as the output of running the tests
   ![](/Screenshots/jUnit_test.png)
 
-- The bug, as the before-and-after code change required to fix it (as two code blocks in Markdown)
+## The bug, as the before-and-after code change required to fix it
+**before**
 ```
 static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length; i += 1) {
@@ -27,6 +28,7 @@ static void reverseInPlace(int[] arr) {
     }
   }
 ```
+**after**
 ```
 static void reverseInPlace(int[] arr) {
     for(int i = 0; i < arr.length/2; i += 1) {
