@@ -1,25 +1,26 @@
 # Part 1 - Bugs
-## A failure-inducing input for the buggy program as a JUnit test
+### A failure-inducing input for the buggy program as a JUnit test
 ```
-	@Test 
-	public void testReverseInPlace() {
+@Test 
+public void testReverseInPlace() {
     int[] input2 = {1, 2, 3};
     ArrayExamples.reverseInPlace(input2);
     assertArrayEquals(new int[]{3, 2, 1}, input2);
-	}
+}
 ```
-## An input that doesn't induce a failure as a JUnit test 
+### An input that doesn't induce a failure as a JUnit test 
 ```
 @Test 
-	public void testReverseInPlace() {
+public void testReverseInPlace() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
+}
 ```
-## The symptom as the output of running the tests
+### The symptom as the output of running the tests
   ![](/Screenshots/jUnit_test.png)
 
-## The bug, as the before-and-after code change required to fix it
+### The bug, as the before-and-after code change required to fix it
 **before**
 ```
 static void reverseInPlace(int[] arr) {
@@ -39,7 +40,7 @@ static void reverseInPlace(int[] arr) {
   }
 ```
 
-# Part 2 - Researching Commands: grep
+# Part 2 - Researching Commands: ```grep```
 - Online, find 4 interesting command-line options or alternate ways to use the command you chose. 
 - To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. 
 - There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. 
@@ -53,3 +54,36 @@ static void reverseInPlace(int[] arr) {
 
 - Along with each option/mode you show, cite your source for how you found out about it as a URL or a description of where you found it. 
 - See the syllabus on Academic Integrity and how to cite sources like ChatGPT for this class.
+
+### grep -r
+
+**Example 1**
+
+Command: ```grep -r "base pair"  technical/```
+Output:
+```
+technical//plos/journal.pbio.0020223.txt:        Watson-Crick base pairing, the proximity of the synthetic reactive groups elevates their
+technical//plos/journal.pbio.0020190.txt:        sequence, which is a specific series of eight base pairs in the DNA of the bacterial
+technical//plos/journal.pbio.0020190.txt:        chromosomes, on the order of one or two thousand base pairs of DNA (or less—their length is
+technical//biomed/1471-2156-2-3.txt:          three exons. The first exon contains 279 base pairs (bp)
+technical//biomed/1471-2121-3-10.txt:        both encode a 10-base pair sequence that is identical to
+technical//biomed/1471-2121-3-10.txt:        the P3 sequence with an insertion of 3 base pairs at
+technical//biomed/gb-2001-2-4-research0010.txt:          necessarily true because of Watson-Crick base pairing.
+technical//biomed/gb-2003-4-4-r24.txt:        important considering that within a few hundred base pairs,
+technical//biomed/gb-2001-2-4-research0011.txt:          sequenced to completion, yielding a 1,036 base pair (bp)
+technical//biomed/1471-2229-2-3.txt:        stringency with a 300 base pair homologous 
+etc.
+```
+Description: It is outputting every line in the directory "technical" that contains the given string "base pair." This is useful when the user wants to know the specific lines in which a certain word in a directory show up, working similarly to a Command-F function on Mac.
+
+**Example 2**
+
+Command: ```grep -r "base pair" technical/plos/*.txt```
+Output:
+```
+technical/plos/journal.pbio.0020190.txt:        sequence, which is a specific series of eight base pairs in the DNA of the bacterial
+technical/plos/journal.pbio.0020190.txt:        chromosomes, on the order of one or two thousand base pairs of DNA (or less—their length is
+technical/plos/journal.pbio.0020223.txt:        Watson-Crick base pairing, the proximity of the synthetic reactive groups elevates their
+```
+Description: It is outputting every line in a .txt file in the directory "technical/plos" that contains the given string "base pair." This is useful when the user wants to know the specific lines in a specific type of file in which a certain word in a directory show up.
+
