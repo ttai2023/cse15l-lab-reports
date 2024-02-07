@@ -52,30 +52,32 @@ class ChatServer {
 ```
 
 ## Using /add-message?s=Hello&user=jpolitz
-
-- Methods Called: handleRequest(URI url), toString(ArrayList<String> strs)
-- Relevant Arguments: URI url - the url that is entered and to be processed
-- Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
-- Changed Values in Fields: jpolitz: Hello was added to ArrayList<String> strings
+![](/Screenshots/first_command.png)
+- Methods Called: ```handleRequest(URI url)```, ```toString(ArrayList<String> strs)```
+- Relevant Arguments: ```URI url``` - the url that is entered and to be processed
+- Relevant Fields: ```ArrayList<String> strings``` - String ArrayList that stores all inputs into the url
+- Changed Values in Fields: ```"jpolitz: Hello"``` was added to ```ArrayList<String> strings```
 
 ## Using /add-message?s=How are you&user=yash
-
-- Methods Called: handleRequest(URI url), toString(ArrayList<String> strs)
-- Relevant Arguments: URI url - the url that is entered and to be processed
-- Relevant Fields: ArrayList<String> strings - String ArrayList that stores all inputs into the url
-- Changed Values in Fields: yash: How are you was added to ArrayList<String> strings
+![](/Screenshots/second_command.png)
+- Methods Called: ```handleRequest(URI url)```, ```toString(ArrayList<String> strs)```
+- Relevant Arguments: ```URI url``` - the url that is entered and to be processed
+- Relevant Fields: ```ArrayList<String> strings``` - String ArrayList that stores all inputs into the url
+- Changed Values in Fields: ```"yash: How are you"``` was added to ```ArrayList<String> strings```
 
 # Part 2
 
 ## The absolute path to the private key for your SSH key for logging into ieng6 (on your computer, an EdStem workspace, or on the home directory of the lab computer)
-
+![](/Screenshots/private_key.png)
+The private key is stored in the id_ed25519 file.
 ## The absolute path to the public key for your SSH key for logging into ieng6 (this is the one you copied to your account on ieng6, so it should be a path on ieng6's file system)
-
+![](/Screenshots/public_key.png)
 ## A terminal interaction where you log into your ieng6 account without being asked for a password.
+![](/Screenshots/login_wo_pw.png)
 
 # Part 3
 
-I learnt that I can create a simple web server just by processing urls through code. 
+I learnt that I can create, start, and run a simple web server just by processing urls through code. By learning the different components of a url, we can process the url as a string and decompose it, returning the intended outcome to the user. Additionally, I also learnt that we need a free port number that no one else is using to run the server. 
 
 
 
