@@ -48,7 +48,8 @@ The array is essentially just getting reflected as the values stored at the firs
 
 **Example 1**
 
-Command: ```grep -r "base pair"  technical/```
+Command: ```grep -r "base pair"  technical/``` 
+
 Output:
 ```
 technical//plos/journal.pbio.0020223.txt:        Watson-Crick base pairing, the proximity of the synthetic reactive groups elevates their
@@ -67,7 +68,8 @@ Description: It is outputting every line in the directory "technical" that conta
 
 **Example 2**
 
-Command: ```grep -r "base pair" technical/plos/*.txt```
+Command: ```grep -r "base pair" technical/plos/*.txt``` 
+
 Output:
 ```
 technical/plos/journal.pbio.0020190.txt:        sequence, which is a specific series of eight base pairs in the DNA of the bacterial
@@ -80,7 +82,8 @@ Description: It is outputting every line in a .txt file in the directory "techni
 
 **Example 1**
 
-Command: ```grep -A 2 "base pair" technical/plos/*.txt```
+Command: ```grep -A 2 "base pair" technical/plos/*.txt``` 
+
 Output:
 ```
 technical/plos/journal.pbio.0020190.txt:        sequence, which is a specific series of eight base pairs in the DNA of the bacterial
@@ -99,7 +102,8 @@ Description: It is outputting every line in the ".txt" files in the technical/pl
 
 **Example 2**
 
-Command: ```grep -A 3 "law" technical/government/Alcohol_Problems/*.txt```
+Command: ```grep -A 3 "law" technical/government/Alcohol_Problems/*.txt``` 
+
 Output:
 ```
 technical/government/Alcohol_Problems/Session3-PDF.txt:rather than force or law enforcement should mark the interventions.
@@ -125,7 +129,8 @@ It is outputting every line in the ".txt" files in the technical/government/Alco
 
 **Example 1**
 
-Command: ```grep -B 2 "base pair" technical/plos/*.txt```
+Command: ```grep -B 2 "base pair" technical/plos/*.txt``` 
+
 Output:
 ```
 technical/plos/journal.pbio.0020190.txt-        So where does recombination (Box 1) fit in? Is recombination something that happens to
@@ -144,7 +149,8 @@ Description: It is outputting every line in the ".txt" files in the technical/pl
 
 **Example 2**
 
-Command: ```grep -B 3 "law"```
+Command: ```grep -B 3 "law"``` 
+
 Output:
 ```
 technical/government/Alcohol_Problems/Session3-PDF.txt-situations created by the injuries and the noisy and often chaotic
@@ -170,7 +176,8 @@ It is outputting every line in the ".txt" files in the technical/government/Alco
 
 **Example 1** 
 
-Command: ```grep -m 10 "police" technical/911report/chapter-9.txt```
+Command: ```grep -m 10 "police" technical/911report/chapter-9.txt``` 
+
 Output: 
 ```
 local public servants, especially the first responders: fire, police, emergency
@@ -188,7 +195,8 @@ It is outputting the first 10 lines it found in the file ```technical/911report/
 
 **Example 2**
 
-Command: ```grep -m 5 "law" technical/government/Alcohol_Problems/Session4-PDF.txt```
+Command: ```grep -m 5 "law" technical/government/Alcohol_Problems/Session4-PDF.txt``` 
+
 Output:
 ```
 (UPPL), a model law drafted by the National Association of
