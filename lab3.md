@@ -39,21 +39,10 @@ static void reverseInPlace(int[] arr) {
     }
   }
 ```
+The array is essentially just getting reflected as the values stored at the first half of the array is not being saved. The code change I made is to save the value at the first position found, then set the first position to the reflected value, and the reflected position to the saved value. I also just iterated through half the array so it would get reversed correctly. 
+
 
 # Part 2 - Researching Commands: ```grep```
-- Online, find 4 interesting command-line options or alternate ways to use the command you chose. 
-- To find information about the commands, a simple Web search like “find command-line options” will probably give decent results. 
-- There is also a built-in command on many systems called man (short for “manual”) that displays information about commands; you can use man grep, for example, to see a long listing of information about how grep works. 
-- Also consider asking ChatGPT!
-
-- For example, we saw the -name option for find in class. For each of those options, give 2 examples of using it on files and directories from ./technical. 
-- Show each example as a code block that shows the command and its output, and write a sentence or two about what it’s doing and why it’s useful.
-
-- That makes 8 total examples, all focused on a single command. There should be two examples each for four different command-line options. 
-- Many commands like these have pretty sophisticated behavior possible – it can take years to be exposed to and learn all of the possible tricks and inner workings.
-
-- Along with each option/mode you show, cite your source for how you found out about it as a URL or a description of where you found it. 
-- See the syllabus on Academic Integrity and how to cite sources like ChatGPT for this class.
 
 ### grep -r
 
@@ -195,6 +184,7 @@ local public servants, especially the first responders: fire, police, emergency
                 working on upper floors. Chiefs also spoke with Port Authority police personnel and
                 Authority police officer to evacuate the South Tower, because in their judgment the
 ```
+It is outputting the first 10 lines it found in the file ```technical/911report/chapter-9.txt``` that has the word "police." This is useful if the user wants to see where a certain word is being used within a file but doesn't want that many outputs. 
 
 **Example 2**
 
@@ -207,3 +197,4 @@ adopted the law, and four others have adopted it with provisional
 law has not been to decrease insurance claims, but to discourage
 are model laws and guidelines. Model legislation forms a uniform
 ```
+It is outputting the first 10 lines it found in the file ```technical/government/Alcohol_Problems/Session4-PDF.txt``` that has the word "law." This is useful if the user wants only a certain number of lines that contains the corresponding input from a file. 
