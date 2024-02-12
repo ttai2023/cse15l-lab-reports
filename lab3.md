@@ -42,7 +42,7 @@ static void reverseInPlace(int[] arr) {
 The array is essentially just getting reflected as the values stored at the first half of the array is not being saved. The code change I made is to save the value at the first position found, then set the first position to the reflected value, and the reflected position to the saved value. I also just iterated through half the array so it would get reversed correctly. 
 
 
-# Part 2 - Researching Commands: ```grep```
+# Part 2 - Researching Commands: ```grep``` (from man grep in terminal)
 
 ### grep -r
 
