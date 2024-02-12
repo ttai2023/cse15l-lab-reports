@@ -87,3 +87,94 @@ technical/plos/journal.pbio.0020223.txt:        Watson-Crick base pairing, the p
 ```
 Description: It is outputting every line in a .txt file in the directory "technical/plos" that contains the given string "base pair." This is useful when the user wants to know the specific lines in a specific type of file in which a certain word in a directory show up.
 
+### grep -A 
+
+**Example 1**
+
+Command: ```grep -A 2 "base pair" technical/plos/*.txt```
+Output:
+```
+technical/plos/journal.pbio.0020190.txt:        sequence, which is a specific series of eight base pairs in the DNA of the bacterial
+technical/plos/journal.pbio.0020190.txt-        chromosome that stimulate the action of proteins that bring about recombination (Eggleston
+technical/plos/journal.pbio.0020190.txt-        and West 1997). Similarly, the immunoglobulin genes of mammals have recombination signal
+--
+technical/plos/journal.pbio.0020190.txt:        chromosomes, on the order of one or two thousand base pairs of DNA (or less—their length is
+technical/plos/journal.pbio.0020190.txt-        difficult to measure), in which recombination events tend to be concentrated. Often they
+technical/plos/journal.pbio.0020190.txt-        are flanked by “coldspots,” regions of lower than average frequency of recombination
+--
+technical/plos/journal.pbio.0020223.txt:        Watson-Crick base pairing, the proximity of the synthetic reactive groups elevates their
+technical/plos/journal.pbio.0020223.txt-        effective molarity by several orders of magnitude, inducing a chemical reaction. Because
+technical/plos/journal.pbio.0020223.txt-        reactions do not take place between reactants linked to mismatched (noncomplementary) DNA,
+```
+Description: It is outputting every line in the ".txt" files in the technical/plos/ directory that contains the given string "base pair" and the two lines after it. This is useful when the user wants to know the context in which a certain word in a file is used.
+
+**Example 2**
+
+Command: ```grep -A 3 "law" technical/government/Alcohol_Problems/*.txt```
+Output:
+```
+technical/government/Alcohol_Problems/Session3-PDF.txt:rather than force or law enforcement should mark the interventions.
+technical/government/Alcohol_Problems/Session3-PDF.txt-If there is a legal aspect to the case, it should be separated from
+technical/government/Alcohol_Problems/Session3-PDF.txt-the clinical intervention as much as possible. Multiple, feasible
+technical/government/Alcohol_Problems/Session3-PDF.txt-referral options that vary in intensity and scope should be
+--
+technical/government/Alcohol_Problems/Session3-PDF.txt:dissected, revealing flaws and problems. If we continue to do that,
+technical/government/Alcohol_Problems/Session3-PDF.txt-we will never make any changes in services. He recommended a
+technical/government/Alcohol_Problems/Session3-PDF.txt-balance between the rigor of research and the application process
+technical/government/Alcohol_Problems/Session3-PDF.txt-that needs to happen.
+--
+technical/government/Alcohol_Problems/Session4-PDF.txt:(UPPL), a model law drafted by the National Association of
+technical/government/Alcohol_Problems/Session4-PDF.txt-Insurance Commissioners (NAIC) in 1947, provides insurers with this
+technical/government/Alcohol_Problems/Session4-PDF.txt-right. The NAIC is an organization of insurance regulators from the
+technical/government/Alcohol_Problems/Session4-PDF.txt-50 states, the District of Columbia, and the 4 U.S. territories. It
+--
+etc.
+```
+It is outputting every line in the ".txt" files in the technical/government/Alcohol_Problems/ directory that contains the given string "law" and the three lines before it. This is useful when the user wants to find out not only which files contain a certain word but the context in which they are used.
+
+### grep --colour=[when] 
+
+**Example 1**
+
+Command: ```grep --colour=always "police" chapter-13.5.txt```
+Output:
+```
+                recorded calls to the Port Authority police desk from people in the towers on
+                from police that morning.
+                special approval by senior U.S. government officials. On September 13, Tampa police
+                the airport so they could get on a plane to Lexington. Tampa police arranged for two
+                Saudi nationals debarked from the plane and were met by local police. Their private
+                security guards were paid, and the police then escorted the three Saudi passengers
+                to Lexington by a local police officer in Lexington who did not have firsthand
+                White House to kill the president. The man was shot by police and then killed
+            8. For Pakistan's unpoliced areas, see Tasneem Noorani interview (Oct. 27, 2003).
+```
+Description: It is outputting every line in the "chapter-13.5.txt" file in the technical/911report/ directory that contains the given string "police," with every "police" being highlighted in red. This is useful when the user wants to know the context in which a certain word in a file is used.
+
+**Example 2**
+
+Command: ```grep -A 3 "law" technical/government/Alcohol_Problems/*.txt```
+Output:
+```
+technical/government/Alcohol_Problems/Session3-PDF.txt:rather than force or law enforcement should mark the interventions.
+technical/government/Alcohol_Problems/Session3-PDF.txt-If there is a legal aspect to the case, it should be separated from
+technical/government/Alcohol_Problems/Session3-PDF.txt-the clinical intervention as much as possible. Multiple, feasible
+technical/government/Alcohol_Problems/Session3-PDF.txt-referral options that vary in intensity and scope should be
+--
+technical/government/Alcohol_Problems/Session3-PDF.txt:dissected, revealing flaws and problems. If we continue to do that,
+technical/government/Alcohol_Problems/Session3-PDF.txt-we will never make any changes in services. He recommended a
+technical/government/Alcohol_Problems/Session3-PDF.txt-balance between the rigor of research and the application process
+technical/government/Alcohol_Problems/Session3-PDF.txt-that needs to happen.
+--
+technical/government/Alcohol_Problems/Session4-PDF.txt:(UPPL), a model law drafted by the National Association of
+technical/government/Alcohol_Problems/Session4-PDF.txt-Insurance Commissioners (NAIC) in 1947, provides insurers with this
+technical/government/Alcohol_Problems/Session4-PDF.txt-right. The NAIC is an organization of insurance regulators from the
+technical/government/Alcohol_Problems/Session4-PDF.txt-50 states, the District of Columbia, and the 4 U.S. territories. It
+--
+etc.
+```
+It is outputting every line in the ".txt" files in the technical/government/Alcohol_Problems/ directory that contains the given string "law" and the three lines before it. This is useful when the user wants to find out not only which files contain a certain word but the context in which they are used.
+
+
+
+
