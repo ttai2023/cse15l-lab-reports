@@ -37,6 +37,7 @@ I used to ```cd``` command to change current directory to ```lab7```. For this, 
 # Step 7
 ### Screenshot
 ![](/Screenshots/step7.png)
+![](/Screenshots/step7_vim.png)
 
 ### Keys Pressed
 ```
@@ -61,6 +62,7 @@ Since the ```<up>``` key gets the previous commands, and ```bash test.sh``` was 
 # Step 9
 ### Screenshot
 ![](/Screenshots/step9.png)
+![](/Screenshots/step9_push.png)
 
 ### Keys Pressed
 ```
