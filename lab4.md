@@ -28,11 +28,11 @@ I copied the ssh url from github from my forked repository. Then, I used the ```
 
 ### Keys Pressed
 ```
-cd<space>lab7<enter>bash<space>test.sh<enter>
+cd<space>l<tab><enter>bash<space>t<tab><enter>
 ```
 
 ### Summary
-I used to ```cd``` command to change current directory to lab7. Then, I ran the ```test.sh``` file using the ```bash``` command.
+I used to ```cd``` command to change current directory to ```lab7```. For this, I typed in ```l```, then used ```<tab>``` to autocomplete the file name. Then, I ran the ```test.sh``` file using the ```bash``` command and ```<tab>``` after typing in ```t``` to autocomplete the ```test.sh``` file name.
 
 # Step 7
 ### Screenshot
@@ -40,11 +40,11 @@ I used to ```cd``` command to change current directory to lab7. Then, I ran the 
 
 ### Keys Pressed
 ```
-vim<space>L<tab>.java/cha<Enter>jexi2<esc>:wq<enter>
+vim<space>L<tab>.<tab><Enter>/cha<Enter>jexi2<esc>:wq<enter>
 ```
 
 ### Summary
-I first opened the ```ListExamples.java``` with the ```vim``` command. I used ```<tab>``` to autocomplete the file name after typing L in, then added the ```.java``` extension. To edit the file, I first searched for "cha" using the ```/``` built-in vim command to find the comment that indicated where we needed to edit to fix the file. Then, I used ```j``` to move one line down, reaching the actual line with code ```index1 += 1``` to be edited. After that, I used the e command to reach the end of the word of ```index1```, then x to delete the last letter, ```1```. To replace it, I typed in ```i``` to enter insert mode and typed 2, making the line of code ```index2 += 1```. Lastly, I used the ```<esc>``` key to escape insert mode, and ```:wq``` command to save changes and quit vim. 
+I first opened the ```ListExamples.java``` with the ```vim``` command. I used ```<tab>``` to autocomplete the file name after typing ```L``` in, then added the ```.``` and used ```<tab>``` again to complete the ```.java``` extension. To edit the file, I first searched for "cha" using the ```/``` built-in vim command to find the comment that indicated where we needed to edit to fix the file. Then, I used ```j``` to move one line down, reaching the actual line with code ```index1 += 1``` to be edited. After that, I used the e command to reach the end of the word of ```index1```, then x to delete the last letter, ```1```. To replace it, I typed in ```i``` to enter insert mode and typed 2, making the line of code ```index2 += 1```. Lastly, I used the ```<esc>``` key to escape insert mode, and ```:wq``` command to save changes and quit vim. 
 
 # Step 8
 ### Screenshot
