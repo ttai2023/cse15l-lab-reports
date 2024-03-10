@@ -1,7 +1,7 @@
 # Part 1: Debugging Scenario
 ### The original post from a student with a screenshot showing a symptom and a description of a guess at the bug/some sense of what the failure-inducing input is.
 
-**Post**
+**Post:**
 ![](/Screenshots/bash_script.png)
 ![](/Screenshots/command_line.png)
 ![](/Screenshots/compile_output.png)
@@ -16,6 +16,7 @@ A guess at the bug would be in the two lines where I redirected the outputs. I t
 ### A response from a TA asking a leading question or suggesting a command to try
 
 **TA Response**
+
 Hi. I suggest that you review what the ```2>``` redirection command really does with command before it, and what ```cat``` does as well. 
 
 ### Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is
