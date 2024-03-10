@@ -3,12 +3,16 @@
 
 **Post:**
 
+```grade.sh file```
 ![](/Screenshots/bash_script.png)
 
+```command line ran```
 ![](/Screenshots/command_line.png)
 
+```compile-output.txt file```
 ![](/Screenshots/compile_output.png)
 
+```compile-error.txt file```
 ![](/Screenshots/compile_error.png)
 
 I was working on my grading script and I wanted to store the compilation output to a file, then extract only the compile errors, if there are any, to another file from the first file. I tried using the ```2>&1``` command to redirect all the output from compiling the file into the ```compile-output.txt``` file, and then used ```2>``` to redirect only the error from ```compile-output.txt``` into the ```compile-error.txt``` file. This is shown in the first screenshot. I then ran the bash script with one of the example repositories given, ```https://github.com/ucsd-cse15l-f22/list-methods-compile-error``` to test my code out. All the output was in the ```compile-output.txt``` file, but the ```compile-error.txt``` file was empty, even though there was an error. Does anyone know what the issue is?
@@ -24,8 +28,11 @@ A guess at the bug would be in the two lines where I redirected the outputs. I t
 Hi. I suggest that you review what the ```2>``` redirection command really does with command before it, and what ```cat``` does as well. 
 
 ### Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is
+
+```grade.sh file after correction```
 ![](/Screenshots/script_corrected.png)
 
+```compile-error.txt file after correction```
 ![](/Screenshots/corrected_file.png)
 
 **Description:**
