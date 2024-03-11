@@ -44,6 +44,82 @@ Hi. I suggest that you review what the ```2>``` redirection command really does 
 **Description:**
 After reviewing the ```2>``` command, I realised that it redirects the errors of the command before the redirection. In this case, it was ```cat```. Since there was no error concatenating the file, the ```compile-error.txt``` file will be empty. What I did to fix the error was ran the ```javac``` command again and redirected the errors directly using ```javac -cp $CPATH *.java 2> compile-error.txt ```. After fixing that, the```compile-error.txt``` file contained the compilation error. Thank you for your help!
 
+### All the information needed about the setup
+
+**Files Needed:**
+```grade.sh``` and ```TestListExamples.java```
+
+**Directory Structure Needed**
+![](/Screenshots/directory_structure.png)
+
+**Contents of each file before fixing the bug**
+
+```grade.sh```
+
+```
+CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
+
+rm -rf student-submission
+rm -rf grading-area
+
+mkdir grading-area
+
+git clone $1 student-submission 2> git-output.txt
+# echo 'Finished cloning'
+
+
+# Draw a picture/take notes on the directory structure that's set up after
+if [[ -f student-submission/ListExamples.java ]]
+then 
+    cp student-submission/ListExamples.java grading-area
+    cp TestListExamples.java grading-area
+else 
+    echo "There should be one file titled ListExamples.java in your repository, nothing else."
+    exit 1
+fi
+# getting to this point
+
+# Then, add here code to compile and run, and do any post-processing of the
+# tests
+cd grading-area
+
+javac -cp $CPATH *.java > compile-output.txt 2>&1
+cat compile-output.txt 2> compile-error.txt 
+
+if [[ $? -ne 0 ]]
+then    
+    echo "Compilation error: see above."
+    exit 1
+fi
+
+java -cp $CPATH org.junit.runner.JUnitCore TestListExamples > junit-output.txt 
+
+if [[ $(head -n 2 junit-output.txt | tail -n 1 | grep "E") != "" ]]
+then
+    lastline=$(cat junit-output.txt | tail -n 2 | head -n 1)
+    tests=$(echo $lastline | awk -F '[, ]' '{print $3}')
+    failures=$(echo $lastline | awk -F '[, ]' '{print $6}')
+    successes=$((tests-failures))
+    echo "Failed tests: "
+    grep ".) test" junit-output.txt
+    echo "Number of tests passed: $successes / $tests"
+else
+    lastline=$(cat junit-output.txt | tail -n 2 | head -n 1)
+    numtests=$(echo $lastline | grep -o '[0-9]*' | head -1)
+    echo "All tests passed"
+    echo "Number of tests passed: $numtests / $numtests"
+fi
+```
+
+**The full command line (or lines) you ran to trigger the bug**
+
+![](/Screenshots/command_line.png)
+
+**A description of what to edit to fix the bug**
+
+To fix the bug, you will have to edit the ```cat compile-output.txt 2> compile-error.txt``` line to ```javac -cp $CPATH *.java 2> compile-error.txt ``` so that the redirection command ```2>``` redirects the errors of the ```javac``` command instead of the ```cat``` command. Initially, since the ```cat``` command will not result in any errors, ```compile-error.txt``` would be empty. After the edit, since there is a compilation error in the file chosen, the errors will be redirected into the ```compile-error.txt``` file.
+
+
 # Part 2: Reflection
 
 In the Week 7 lab, we had to time ourselves doing a series of tasks. I learnt keyboard shortcuts that I didn't know before, such as ```Ctrl-U```, ```Ctrl-A```, and ```Ctrl-W```, which really sped up my process, as I can correct my mistakes and typos really quickly instead of trying to navigate in the terminal only using arrow keys. They were really helpful, and I have started using them in my own projects when I'm working with the command-line.
