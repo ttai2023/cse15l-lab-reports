@@ -50,6 +50,7 @@ After reviewing the ```2>``` command, I realised that it redirects the errors of
 ```grade.sh``` and ```TestListExamples.java```
 
 **Directory Structure Needed**
+
 ![](/Screenshots/directory_structure.png)
 
 **Contents of each file before fixing the bug**
