@@ -55,7 +55,7 @@ After reviewing the ```2>``` command, I realised that it redirects the errors of
 
 **Contents of each file before fixing the bug:**
 
-`grade.sh`
+#### `grade.sh`
 
 ```
 CPATH='.:../lib/hamcrest-core-1.3.jar:../lib/junit-4.13.2.jar'
@@ -106,7 +106,7 @@ else
 fi
 ```
 
-```TestListExamples.java```
+#### ```TestListExamples.java```
 
 ```
 import java.util.ArrayList;
