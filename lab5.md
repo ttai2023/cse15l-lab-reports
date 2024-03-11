@@ -105,7 +105,7 @@ else
     echo "Number of tests passed: $numtests / $numtests"
 fi
 ```
-hi
+
 ```TestListExamples.java```
 
 ```
