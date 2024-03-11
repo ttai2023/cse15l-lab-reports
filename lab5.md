@@ -11,7 +11,7 @@
 
 ![](/Screenshots/command_line.png)
 
-`compile-output.txt` fiile
+`compile-output.txt` file
 
 ![](/Screenshots/compile_output.png)
 
