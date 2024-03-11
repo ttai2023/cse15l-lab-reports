@@ -3,19 +3,19 @@
 
 **Post:**
 
-```grade.sh file```
+`grade.sh` file
 
 ![](/Screenshots/bash_script.png)
 
-```command line ran```
+`command line ran`
 
 ![](/Screenshots/command_line.png)
 
-```compile-output.txt file```
+`compile-output.txt` fiile
 
 ![](/Screenshots/compile_output.png)
 
-```compile-error.txt file```
+`compile-error.txt` file 
 
 ![](/Screenshots/compile_error.png)
 
@@ -33,11 +33,11 @@ Hi. I suggest that you review what the ```2>``` redirection command really does 
 
 ### Another screenshot/terminal output showing what information the student got from trying that, and a clear description of what the bug is
 
-```grade.sh file after correction```
+`grade.sh` file after correction
 
 ![](/Screenshots/script_corrected.png)
 
-```compile-error.txt file after correction```
+`compile-error.txt` file after correction
 
 ![](/Screenshots/corrected_file.png)
 
