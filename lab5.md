@@ -49,11 +49,11 @@ After reviewing the ```2>``` command, I realised that it redirects the errors of
 **Files Needed:**
 ```grade.sh``` and ```TestListExamples.java```
 
-**Directory Structure Needed**
+**Directory Structure Needed:**
 
 ![](/Screenshots/directory_structure.png)
 
-**Contents of each file before fixing the bug**
+**Contents of each file before fixing the bug:**
 
 ```grade.sh```
 
@@ -66,10 +66,7 @@ rm -rf grading-area
 mkdir grading-area
 
 git clone $1 student-submission 2> git-output.txt
-# echo 'Finished cloning'
 
-
-# Draw a picture/take notes on the directory structure that's set up after
 if [[ -f student-submission/ListExamples.java ]]
 then 
     cp student-submission/ListExamples.java grading-area
@@ -78,10 +75,7 @@ else
     echo "There should be one file titled ListExamples.java in your repository, nothing else."
     exit 1
 fi
-# getting to this point
 
-# Then, add here code to compile and run, and do any post-processing of the
-# tests
 cd grading-area
 
 javac -cp $CPATH *.java > compile-output.txt 2>&1
@@ -112,11 +106,66 @@ else
 fi
 ```
 
-**The full command line (or lines) you ran to trigger the bug**
+```TestListExamples.java```
+
+```
+import java.util.ArrayList;
+import java.util.List;
+
+interface StringChecker { boolean checkString(String s); }
+
+class ListExamples {
+
+  // Returns a new list that has all the elements of the input list for which
+  // the StringChecker returns true, and not the elements that return false, in
+  // the same order they appeared in the input list;
+  static List<String> filter(List<String> list, StringChecker sc) {
+    List<String> result = new ArrayList<>();
+    for(String s: list) {
+      if(sc.checkString(s)) {
+        result.add(0, s)
+      }
+    }
+    return result;
+  }
+
+
+  // Takes two sorted list of strings (so "a" appears before "b" and so on),
+  // and return a new list that has all the strings in both list in sorted order.
+  static List<String> merge(List<String> list1, List<String> list2) {
+    List<String> result = new ArrayList<>();
+    int index1 = 0, index2 = 0;
+    while(index1 < list1.size() && index2 < list2.size()) {
+      if(list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+      }
+      else {
+        result.add(list2.get(index2));
+        index2 += 1;
+      }
+    }
+    while(index1 < list1.size()) {
+      result.add(list1.get(index1));
+      index1 += 1;
+    }
+    while(index2 < list2.size()) {
+      result.add(list2.get(index2));
+      index1 += 1;
+    }
+    return result;
+  }
+
+
+}
+```
+
+
+**The full command line (or lines) you ran to trigger the bug:**
 
 ![](/Screenshots/command_line.png)
 
-**A description of what to edit to fix the bug**
+**A description of what to edit to fix the bug:**
 
 To fix the bug, you will have to edit the ```cat compile-output.txt 2> compile-error.txt``` line to ```javac -cp $CPATH *.java 2> compile-error.txt ``` so that the redirection command ```2>``` redirects the errors of the ```javac``` command instead of the ```cat``` command. Initially, since the ```cat``` command will not result in any errors, ```compile-error.txt``` would be empty. After the edit, since there is a compilation error in the file chosen, the errors will be redirected into the ```compile-error.txt``` file.
 
